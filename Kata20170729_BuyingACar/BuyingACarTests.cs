@@ -31,6 +31,14 @@ namespace Kata20170729_BuyingACar
             AssertBuyingCarLeftMoney(new[] { 2, 69 }, actual);
         }
 
+        [TestMethod]
+        public void oldcar_2000_newcar_8000_save_1000_loss_1point5()
+        {
+            var buyCar = new BuyCar();
+            var actual = buyCar.nbMonths(2000, 8000, 1000, 1.5);
+            AssertBuyingCarLeftMoney(new[] { 6, 766 }, actual);
+        }
+
         private static void AssertBuyingCarLeftMoney(int[] expected, int[] actual)
         {
             CollectionAssert.AreEqual(expected, actual);
